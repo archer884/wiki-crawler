@@ -1,0 +1,13 @@
+[package]
+name = "wiki-crawler"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.62"
+clap = { version = "3.2.17", features = ["derive"] }
+regex = "1.6.0"
+serde = { version = "1.0.144", features = ["derive"] }
+serde-xml-rs = "0.5.1"
