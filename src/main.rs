@@ -172,8 +172,7 @@ fn run(args: &Args) -> anyhow::Result<()> {
         .filter_map(|page| {
             ex.extract(&tf.filter(page.text()?))
                 .map(|link| (page.title, link.to_string()))
-        })
-        .take(100);
+        });
 
     for (title, link) in pages {
         println!("{title} -> {link}")
