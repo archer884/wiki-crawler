@@ -112,8 +112,8 @@ impl TextFilter {
     }
 
     fn filter(&self, text: &str) -> String {
-        let text = self.braces.replace_all(&text, "");
         let text = self.parens.replace_all(&text, "");
+        let text = self.braces.replace_all(&text, "");
         let text = self.source.replace_all(&text, "");
         text.into()
     }
